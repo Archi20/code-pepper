@@ -1,0 +1,22 @@
+<mat-card class="starship-card">
+  <mat-card-header>
+    <mat-card-title>{{starshipInfo.name}}</mat-card-title>
+    <mat-card-subtitle>{{starshipInfo.model}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="container">
+    <div class="row">
+      <div class="col-sm card-list">
+        <li>Crew:</li>
+        <li>Length:</li>
+        <li>Battles:</li>
+        <li>Wins:</li>
+      </div>
+      <div class="col-sm card-list">
+        <li>{{starshipInfo.crew}}</li>
+        <li>{{starshipInfo.length}}</li>
+        <li>{{starshipInfo.battlesInfo.amount}}</li>
+        <li>{{starshipInfo.battlesInfo.won}}</li>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

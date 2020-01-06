@@ -1,0 +1,18 @@
+<div class="text-center portlet">
+    <button type="button" class="btn btn-primary" (click)="getShips()">Draw ships</button>
+
+    <div [@openCloseBattleCards]="battleState" [hidden]="starships.length === 0" class="justify-content-center">
+        <div class="row battle-cards">
+            <sb-starship-card [starshipInfo]="starships[0]"></sb-starship-card>
+            <sb-starship-card [starshipInfo]="starships[1]"></sb-starship-card>
+        </div>
+
+        <button type="button" class="btn btn-danger" (click)="startBattle()">Battle!</button>
+    </div>
+
+    <div *ngIf="battleWinner">
+        <div class="row battle-cards">
+            <sb-starship-card [starshipInfo]="battleWinner"></sb-starship-card>
+        </div>
+    </div>
+</div>
